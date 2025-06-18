@@ -125,7 +125,7 @@ function updateOrCreateDynamicCard(epaper) {
       .addEventListener("click", function (e) {
         e.preventDefault();
         const pdfUrl = this.getAttribute("data-pdf-url");
-        const title = this.getAttribute("data-title");
+        const title = this.getAttribute("data-title"); 
         openPdfModal(pdfUrl, title);
       });
   }
@@ -375,7 +375,7 @@ function showShareModal() {
   }
 
   const scaleFactor = 4; // For high-resolution output
-  const topTextHeight = 100; // Increased space for the larger logo/image
+  const topTextHeight = 150; // Increased space for the larger logo/image
   const bottomTextHeight = 50; // Space for the footer text
 
   const tempCanvasCrop = document.createElement("canvas");
@@ -397,16 +397,16 @@ function showShareModal() {
 
   // Load the image to replace "దక్షిణాది"
   const logoImage = new Image();
-  logoImage.src = "images/News logo.png"; // Replace with the path to your image
+  logoImage.src = "images/headingimg.jpg"; 
 
   // Ensure the image is fully loaded before drawing
   logoImage.onload = function () {
-    // Define the scaled dimensions for the logo
-    const scaledLogoWidth = 250; // Increased width of the logo
-    const scaledLogoHeight = 100; // Increased height of the logo
+    // Define the scaled dimensions for the logo (increased size)
+    const scaledLogoWidth = 400; // Increased width of the logo
+    const scaledLogoHeight = 160; // Increased height of the logo
 
     // Calculate position to center the scaled image horizontally
-    const logoX = cropWidth / 2 - scaledLogoWidth / 2;
+    const logoX = cropWidth / 2 - scaledLogoWidth / 2; // Center horizontally
     const logoY = 0; // Place the logo at the top (before the cropped image)
 
     // Draw the scaled image on the canvas
@@ -462,6 +462,7 @@ function showShareModal() {
     console.error("Failed to load the logo image.");
   };
 }
+
 function closeShareModal() {
   shareModal.style.display = "none";
 }
