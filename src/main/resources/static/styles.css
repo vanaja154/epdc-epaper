@@ -3,6 +3,19 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+ /* Custom Header Styling */
+ .custom-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.custom-header img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px;
+}
 .right-section {
   margin-left: 70px;
 }
@@ -83,7 +96,7 @@ footer {
   color: white;
 }
 .footer-bottom a {
-  color: #1c1a1a;
+  color: rgb(250, 170, 20);
   text-decoration: none;
 }
 
